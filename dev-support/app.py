@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-
+from backend.api_client import generate_code
 from components.sidebar import render_sidebar
 from components.agent_panel import render_agent_panel
 
@@ -76,6 +76,15 @@ with col1:
 
     if st.button("🚀 Run Agents", use_container_width=True):
 
+         
+
+        result = generate_code(
+            user_prompt
+        )
+
+        st.code(
+            result["generated_code"]
+        )
         # TODO:
         # Replace this block with FastAPI backend call.
         #
