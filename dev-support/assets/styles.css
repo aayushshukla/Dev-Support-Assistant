@@ -1,0 +1,260 @@
+/* ==========================================
+   GLOBAL STYLES
+========================================== */
+
+.stApp {
+  background: #f8fafc;
+}
+
+/* Hide Streamlit Branding */
+
+#MainMenu {
+  visibility: hidden;
+}
+
+footer {
+  visibility: hidden;
+}
+
+header {
+  visibility: hidden;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.header-container {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e3a8a 100%);
+
+  padding: 28px;
+  border-radius: 18px;
+
+  color: white;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  margin-bottom: 25px;
+}
+
+.header-container h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.header-container p {
+  margin-top: 10px;
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+section[data-testid="stSidebar"] {
+  background: #0f172a;
+  border-right: 1px solid #1e293b;
+}
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] p {
+  color: white;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.stTextArea textarea {
+  border-radius: 12px !important;
+  border: 1px solid #dbe4f0 !important;
+
+  font-size: 15px !important;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.stTextArea textarea:focus {
+  border: 1px solid #2563eb !important;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.stButton button {
+  width: 100%;
+  height: 50px;
+
+  border: none !important;
+
+  border-radius: 12px !important;
+
+  background: linear-gradient(135deg, #2563eb, #4f46e5) !important;
+
+  color: white !important;
+
+  font-weight: 600 !important;
+
+  font-size: 16px !important;
+
+  transition: all 0.3s ease !important;
+
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.stButton button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
+}
+
+/* ==========================================
+   METRIC CARDS
+========================================== */
+
+div[data-testid="metric-container"] {
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 18px;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+div[data-testid="metric-container"] label {
+  color: #64748b !important;
+}
+
+/* ==========================================
+   AGENT EXPANDERS
+========================================== */
+
+.streamlit-expanderHeader {
+  background: white;
+
+  border-radius: 12px;
+
+  border: 1px solid #e5e7eb;
+
+  font-weight: 600;
+}
+
+.streamlit-expanderContent {
+  background: #ffffff;
+
+  border-radius: 0 0 12px 12px;
+
+  border: 1px solid #e5e7eb;
+}
+
+/* ==========================================
+   CODE BLOCKS
+========================================== */
+
+.stCodeBlock {
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+}
+
+/* ==========================================
+   STATUS PANEL
+========================================== */
+
+.status-card {
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================
+   AGENT CARDS
+========================================== */
+
+.agent-card {
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 18px;
+
+  margin-top: 12px;
+
+  border-left: 5px solid #2563eb;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.agent-card:hover {
+  transform: translateY(-3px);
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   SUCCESS ALERTS
+========================================== */
+
+.stSuccess {
+  border-radius: 12px;
+}
+
+/* ==========================================
+   PROGRESS BAR
+========================================== */
+
+.stProgress > div > div > div > div {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+}
+
+/* ==========================================
+   CHAT STYLE PANEL
+========================================== */
+
+.chat-container {
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================
+   CUSTOM SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
