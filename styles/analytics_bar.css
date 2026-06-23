@@ -1,0 +1,36 @@
+.analytics-header {
+  background: #1f2937;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.analytics-header h3 {
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+
+hr {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+/* Metric Label */
+
+[data-testid="stMetricLabel"] {
+  font-size: 14px !important;
+}
+
+/* Metric Value */
+
+[data-testid="stMetricValue"] {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+/* Section Headers */
+
+h3 {
+  font-size: 24px !important;
+}
