@@ -1,0 +1,35 @@
+# ===== Web framework & server =====
+fastapi
+uvicorn[standard]
+python-multipart
+
+# ===== Frontend =====
+streamlit
+
+# ===== LLM & embeddings =====
+openai
+langchain-core
+langchain-openai
+langchain-text-splitters
+
+# ===== Retrieval & re-ranking =====
+sentence-transformers
+rank-bm25
+numpy
+
+# ===== Vector database =====
+psycopg2-binary
+pgvector
+
+# ===== Document ingestion =====
+pypdf
+pandas
+
+# ===== Evaluation =====
+ragas
+datasets
+
+# ===== Utilities =====
+python-dotenv
+pydantic
+requests
