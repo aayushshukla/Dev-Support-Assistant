@@ -1,5 +1,5 @@
 import streamlit as st
-import streamlit as st
+
 
 
 def load_analytics_css():
@@ -77,6 +77,9 @@ def render_analytics_bar(stats):
         "Confidence",
         f"{stats.get('confidence', 0)}%"
     )
+
+
+  
 
     st.divider()
 

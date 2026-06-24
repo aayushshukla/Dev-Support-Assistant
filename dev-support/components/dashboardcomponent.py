@@ -55,35 +55,127 @@ def render_dashboard():
 
         query_stats = dashboard["query_stats"]
 
-        col1, col2, col3, col4, col5 = st.columns(5)
+        col1, col2, col3 = st.columns(3)
 
         col1.metric(
             "Total Queries",
-            query_stats.get("total_queries", 0)
+            query_stats.get(
+                "total_queries",
+                0
+            )
         )
 
         col2.metric(
             "API Queries",
-            query_stats.get("api_queries", 0)
+            query_stats.get(
+                "api_queries",
+                0
+            )
         )
 
         col3.metric(
             "Code Queries",
-            query_stats.get("code_queries", 0)
+            query_stats.get(
+                "code_queries",
+                0
+            )
         )
+
+        col4, col5, col6 , col7= st.columns(4)
 
         col4.metric(
             "Runbook Queries",
-            query_stats.get("runbook_queries", 0)
+            query_stats.get(
+                "runbook_queries",
+                0
+            )
         )
 
         col5.metric(
             "Document Queries",
-            query_stats.get("document_queries", 0)
+            query_stats.get(
+                "document_queries",
+                0
+            )
         )
 
-        
-        
+        col6.metric(
+            "Web Queries",
+            query_stats.get(
+                "web_queries",
+                0
+            )
+        )
+        col7.metric(
+        "Memory Turns",
+        len(
+            st.session_state.get(
+                "messages",
+                []
+            )
+        )
+)
+        st.divider()
+
+        st.divider()
+
+# =================================================
+# CACHE STATISTICS
+# =================================================
+
+        st.subheader(
+            "⚡ Cache Statistics"
+        )
+
+        cache_stats = dashboard.get(
+            "cache_stats",
+            {}
+        )
+
+        col1, col2, col3, col4 = st.columns(4)
+
+        col1.metric(
+
+            "Cache Size",
+
+            cache_stats.get(
+                "cache_size",
+                0
+            )
+        )
+
+        col2.metric(
+
+            "Cache Hits",
+
+            cache_stats.get(
+                "cache_hits",
+                0
+            )
+        )
+
+        col3.metric(
+
+            "Cache Misses",
+
+            cache_stats.get(
+                "cache_misses",
+                0
+            )
+        )
+
+        col4.metric(
+
+            "Hit Ratio %",
+
+            cache_stats.get(
+                "hit_ratio",
+                0
+            )
+        )  
+
+        st.divider()   
+                
         # =================================================
         # AVAILABLE AGENTS
         # =================================================
@@ -219,6 +311,48 @@ def render_dashboard():
         )
 
         st.divider()
+
+        # =================================================
+# FEEDBACK STATISTICS
+# =================================================
+
+        st.subheader(
+            "👍 User Feedback"
+        )
+
+        feedback_stats = dashboard.get(
+            "feedback_stats",
+            {}
+        )
+
+        col1, col2, col3 = st.columns(3)
+
+        positive = feedback_stats.get(
+            "positive_feedback",
+            0
+        )
+
+        negative = feedback_stats.get(
+            "negative_feedback",
+            0
+        )
+
+        total = positive + negative
+
+        col1.metric(
+            "👍 Positive",
+            positive
+        )
+
+        col2.metric(
+            "👎 Negative",
+            negative
+        )
+
+        col3.metric(
+            "📊 Total Feedback",
+            total
+        )
 
         # =================================================
         # SYSTEM STATUS
